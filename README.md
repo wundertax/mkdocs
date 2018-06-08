@@ -30,3 +30,9 @@ docker run -it --rm -p 8000:8000 -v `pwd`:/docs wundertax/mkdocs:latest serve
 
 ```
 
+### New
+
+```console
+docker run -it --rm -v `pwd`:/docs wundertax/mkdocs:latest new
+```
+
