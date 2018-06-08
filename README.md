@@ -1,5 +1,10 @@
-# mkdocs
+# Wundertax MkDocs
 Custom Docker Container With MkDocs For Wundertax
+
+
+## Dependencies
+
+- A working mkdocs.yml in the **root** of your repository
 
 ## Commands
 
