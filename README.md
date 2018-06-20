@@ -1,5 +1,5 @@
 # Wundertax MkDocs
-Custom Docker Container With MkDocs For Wundertax
+Custom Docker Container With MkDocs
 
 
 ## Dependencies
