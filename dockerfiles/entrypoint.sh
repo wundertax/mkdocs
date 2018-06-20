@@ -48,7 +48,7 @@ appHelp () {
 }
 
 # This avoids permission denied if the data volume is mounted by root
-chown -R ttd /docs
+chown -R wt /docs
 
 case "$1" in
   serve)
@@ -86,8 +86,9 @@ exit 0
 
 
 #exec su-exec $@
-# Re-set permission to the `ttd` user
+# Re-set permission to the `wt` user
+# Run as user `wt`
 # This avoids permission denied if the data volume is mounted by root
-#chown -R ttd /docs
-exec su-exec ttd "$@"
+
+exec su-exec wt "$@"
 

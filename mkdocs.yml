@@ -5,7 +5,7 @@ site_author: 'wundertax'
 #repo_url: 'https://github.com/wundertax/documentation'
 theme:
   name: 'material'
-  logo: 'images/logo.png'
+  logo: 'images/logo.svg'
   favicon: 'images/favicon.png'
   palette:
     primary: 'Blue'
@@ -18,6 +18,12 @@ markdown_extensions:
   - codehilite
   - toc:
       permalink: true
+
+
+# Repository
+repo_name: wundertax/mkdocs
+repo_url: https://github.com/wundertax/mkdocs
+edit_uri: ""
 
 # Copyright
 copyright: 'Copyright &copy; 2018 - wundertax'
