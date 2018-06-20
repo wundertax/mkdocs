@@ -7,3 +7,5 @@ Makefile
 VERSION
 LICENSE
 TODO.md
+site
+mkdocs.yml
