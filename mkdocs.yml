@@ -8,8 +8,8 @@ theme:
   logo: 'images/logo.png'
   favicon: 'images/favicon.png'
   palette:
-    primary: 'teal'
-    accent: 'indigo'
+    primary: 'Blue'
+    accent: 'Blue'
     #  feature:
     #tabs: true
 
