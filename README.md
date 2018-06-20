@@ -3,7 +3,9 @@ Custom Docker Container With MkDocs
 
 ## About
 
-[Docker](https://docker.com) based documentation testing suite bsewd on [MkDocs](https://www.mkdocs.org/).
+[Docker](https://docker.com) based documentation testing suite based on [MkDocs](https://www.mkdocs.org/).
+
+Uses [Material](https://squidfunk.github.io/mkdocs-material/) as default theme.
 
 ## Dependencies
 
