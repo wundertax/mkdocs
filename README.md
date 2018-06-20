@@ -1,43 +1,31 @@
 # Wundertax MkDocs
 Custom Docker Container With MkDocs
 
+## About
+
+[Docker](https://docker.com) based documentation testing suite bsewd on [MkDocs](https://www.mkdocs.org/).
 
 ## Dependencies
 
+- [Docker](https://docker.com)
 - A working mkdocs.yml in the **root** of your repository
 
-## Commands
-
-From the **root** of your repository
-
-
-### Help
+## Install
 
 ``` console
-
-docker run -it --rm -v `pwd`:/docs wundertax/mkdocs:latest help
-
+docker run -it -v "${PWD}":/srv/docs wundertax/chopper:latest
 ```
 
-### Build
+## Docs
 
-``` console
+Documentation is located in the `docs` directory.
 
-docker run -it --rm -v `pwd`:/docs wundertax/mkdocs:latest build
+## Contributing
+Pull requests are welcome.
 
-```
+For major changes, please open an issue first to discuss what you would like to change.
 
-### Serve
+Please make sure to update tests as appropriate.
 
-``` console
-
-docker run -it --rm -p 8000:8000 -v `pwd`:/docs wundertax/mkdocs:latest serve
-
-```
-
-### New
-
-```console
-docker run -it --rm -v `pwd`:/docs wundertax/mkdocs:latest new
-```
-
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
