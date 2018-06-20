@@ -13,7 +13,7 @@ Custom Docker Container With MkDocs
 ## Install
 
 ``` console
-docker run -it -v "${PWD}":/srv/docs wundertax/chopper:latest
+docker pull wundertax/mkdocs
 ```
 
 ## Docs
