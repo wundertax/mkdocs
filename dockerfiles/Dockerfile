@@ -1,10 +1,12 @@
-FROM alpine:latest
+FROM alpine:3.8
 LABEL maintainer "Sven <sven@wundertax.de" \
     org.label-schema.vendor = "wundertax"
 
 ENV MKDOCS_VERSION 0.17.3
 
 RUN adduser -s /bin/false -D -H wt \
+    && mkdir /docs \
+    && touch /docs/mkdocs.yml \
     && apk --no-cache add \
     python3 \
     bash \
@@ -25,11 +27,12 @@ WORKDIR /docs/
 
 COPY dockerfiles/entrypoint.sh /usr/local/bin/entrypoint.sh
 
-ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/entrypoint.sh"]
+#ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/entrypoint.sh"]
 
 # Expose MkDocs development server port
 EXPOSE 8000
 
 # Below settings are used for debug and stuff
+ENTRYPOINT ["bash"]
 #ENTRYPOINT ["mkdocs"]
 #CMD ["serve", "--dev-addr=0.0.0.0:8000"]
