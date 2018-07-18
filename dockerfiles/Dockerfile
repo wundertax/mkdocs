@@ -5,8 +5,8 @@ LABEL maintainer "Sven <sven@wundertax.de" \
 ENV MKDOCS_VERSION 0.17.3
 
 RUN adduser -s /bin/false -D -H wt \
-    && mkdir /docs \
-    && touch /docs/mkdocs.yml \
+    && mkdir -p /srv/docs \
+    && touch /srv/mkdocs.yml \
     && apk --no-cache add \
     python3 \
     bash \
@@ -21,18 +21,18 @@ RUN adduser -s /bin/false -D -H wt \
                 mkdocs-material \
                 pymdown-extensions
 
-VOLUME ["/docs/"]
+#VOLUME ["/docs/"]
 
-WORKDIR /docs/
+WORKDIR /srv/
 
 COPY dockerfiles/entrypoint.sh /usr/local/bin/entrypoint.sh
 
-#ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/entrypoint.sh"]
+ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/entrypoint.sh"]
 
 # Expose MkDocs development server port
 EXPOSE 8000
 
 # Below settings are used for debug and stuff
-ENTRYPOINT ["bash"]
+#ENTRYPOINT ["bash"]
 #ENTRYPOINT ["mkdocs"]
 #CMD ["serve", "--dev-addr=0.0.0.0:8000"]

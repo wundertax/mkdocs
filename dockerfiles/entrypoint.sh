@@ -24,7 +24,7 @@ appNew () {
 
 appBuild () {
 	echo -en "$COL_YELLOW=> Building HTML:$COL_RESET\\n"
-	mkdocs build --clean
+	mkdocs build --clean --config-file=/srv/mkdocs.yml
 }
 
 appVersion () {
@@ -48,7 +48,7 @@ appHelp () {
 }
 
 # This avoids permission denied if the data volume is mounted by root
-chown -R wt /docs
+chown -R wt /srv/docs
 
 case "$1" in
   serve)
