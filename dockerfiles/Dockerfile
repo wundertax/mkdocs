@@ -1,8 +1,11 @@
 FROM alpine:latest
-LABEL maintainer "Sven <sven@wundertax.de" \
-    org.label-schema.vendor = "wundertax"
+LABEL maintainer="Wundertax Tech <devops@wundertax.de>" \
+      org.label-schema.name="mkdocs" \
+      org.label-schema.description="Mkdocs processor." \
+      org.label-schema.vendor="Wundertax GmbH" \
+      org.label-schema.docker.cmd="docker run -d wundertax/mkdocs:latest build"
 
-ENV MKDOCS_VERSION 0.17.3
+ENV MKDOCS_VERSION 1.0.4
 
 RUN adduser -s /bin/false -D -H wt \
     && apk --no-cache add \
