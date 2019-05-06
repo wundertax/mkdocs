@@ -13,14 +13,15 @@ RUN adduser -s /bin/false -D -H wt \
     bash \
     tini \
     su-exec \
+    ca-certificates \
     && python3 -m ensurepip \
     && rm -r /usr/lib/python*/ensurepip \
     && pip3 install --no-cache-dir --upgrade pip \
     && pip3 install --no-cache-dir --upgrade setuptools \
     && pip3 install --no-cache-dir mkdocs==${MKDOCS_VERSION} \
 		pygments \
-                mkdocs-material \
-                pymdown-extensions
+    mkdocs-material \
+    pymdown-extensions
 
 VOLUME ["/docs/"]
 
